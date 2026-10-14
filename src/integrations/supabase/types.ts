@@ -342,6 +342,7 @@ export type Database = {
         }
         Returns: undefined
       }
+      claim_first_admin: { Args: never; Returns: undefined }
       consume_auth_email_code_limit: {
         Args: {
           p_bucket_key: string
