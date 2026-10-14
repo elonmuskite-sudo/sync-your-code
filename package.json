@@ -26,7 +26,10 @@
     "db:setup:dry": "node scripts/setup-supabase.js --dry-run",
     "db:verify": "node scripts/setup-supabase.js --verify-only",
     "deploy": "npm run build && wrangler deploy",
-    "admin:bootstrap": "node scripts/bootstrap-admin.js"
+    "admin:bootstrap": "node scripts/bootstrap-admin.js",
+    "secrets:run": "node scripts/secrets-run.js",
+    "secrets:check": "node scripts/secrets-run.js --check",
+    "secrets:dry": "node scripts/secrets-run.js --dry-run"
   },
   "dependencies": {
     "@base44/sdk": "^0.8.37",
