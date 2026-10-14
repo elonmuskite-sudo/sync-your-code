@@ -16,3 +16,5 @@
 - Production runs on the user's own Supabase project via Vercel env vars; docs/supabase-schema.sql is the schema to apply there, since that project is not managed from Lovable.
 - Encode reactions and reply metadata with the versioned chat protocol in existing message fields; this preserves compatibility without requiring unprovisioned database columns.
 - Centralize chat controls in ChatButton and chat presentation effects in global semantic-token CSS; this keeps interaction and theme behavior consistent.
+- Secrets for Supabase Edge Functions and Vercel are pushed by scripts/secrets-run.js (local or .github/workflows/secrets-sync.yml); one script keeps key checks and destinations consistent.
+- tsconfig excludes the unused TanStack/shadcn scaffold files (src/components/ui, src/routes, router/server/start, vite.config.ts); the live app is the JSX + vite.config.js build and those files reference packages that are not installed.

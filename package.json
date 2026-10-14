@@ -26,7 +26,10 @@
     "db:setup:dry": "node scripts/setup-supabase.js --dry-run",
     "db:verify": "node scripts/setup-supabase.js --verify-only",
     "deploy": "npm run build && wrangler deploy",
-    "admin:bootstrap": "node scripts/bootstrap-admin.js"
+    "admin:bootstrap": "node scripts/bootstrap-admin.js",
+    "secrets:run": "node scripts/secrets-run.js",
+    "secrets:check": "node scripts/secrets-run.js --check",
+    "secrets:dry": "node scripts/secrets-run.js --dry-run"
   },
   "dependencies": {
     "@base44/sdk": "^0.8.37",
@@ -50,7 +53,7 @@
     "@supabase/supabase-js": "^2.117.3",
     "@tanstack/react-query": "^5.84.1",
     "@vladmandic/face-api": "^1.7.15",
-    "appwrite": "28.3.0",
+    "appwrite": "28.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
